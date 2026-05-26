@@ -1,0 +1,114 @@
+export default function Hero() {
+  return (
+    <section className="c3-hero" id="hero">
+      <div className="c3-hero-bg" />
+
+      {/* ── Left column ── */}
+      <div className="c3-hero-left">
+        <div className="c3-hero-badge">
+          <span className="c3-badge-dot" />
+          Based in Varanasi · Serving across India
+        </div>
+
+        <h1 className="c3-h1">
+          We Build Brands <em>That</em> Get Found Online
+        </h1>
+
+        <p className="c3-hero-sub">
+          C3Tech crafts stunning websites and powerful digital marketing
+          strategies for startups, portfolios, and private limited companies —
+          turning clicks into clients.
+        </p>
+
+        <div className="c3-hero-actions">
+          <a
+            href="https://wa.me/919999999999?text=Hi%20C3Tech%2C%20I%20want%20a%20website!"
+            className="c3-btn-primary"
+            target="_blank"
+            rel="noreferrer"
+          >
+            💬 Chat on WhatsApp
+          </a>
+          <a
+            className="c3-btn-secondary"
+            onClick={() =>
+              document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            View Our Work →
+          </a>
+        </div>
+
+        <div className="c3-hero-stats">
+          {[
+            { num: "50+",  label: "Projects Delivered" },
+            { num: "3x",   label: "Avg. Traffic Growth" },
+            { num: "100%", label: "Client Satisfaction" },
+          ].map((s) => (
+            <div key={s.label}>
+              <div className="c3-stat-num">{s.num}</div>
+              <div className="c3-stat-label">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Right column – card stack ── */}
+      <div className="c3-hero-right">
+        <div className="c3-hero-card-stack">
+          {/* Main card */}
+          <div className="c3-hcard c3-hcard-main">
+            <div
+              style={{
+                flex: 1,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: "3.5rem", marginBottom: "1rem" }}>⬡</div>
+                <div
+                  style={{
+                    fontSize: "0.75rem",
+                    color: "rgba(255,255,255,0.3)",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  C3Tech Studio
+                </div>
+              </div>
+            </div>
+            <div className="c3-hcard-main-inner">
+              <div className="c3-hcard-tag">Latest Project</div>
+              <div className="c3-hcard-title">
+                Sharma &amp; Associates
+                <br />
+                Law Firm Website
+              </div>
+              <div className="c3-hcard-sub">Website + SEO + Google Ads</div>
+            </div>
+          </div>
+
+          {/* Overlay card */}
+          <div className="c3-hcard c3-hcard-overlay">
+            <div className="c3-hcard-icon">📈</div>
+            <div className="c3-hcard-overlay-title">Digital Marketing</div>
+            <div className="c3-hcard-overlay-sub">SEO · Ads · Social Media</div>
+          </div>
+
+          {/* Bottom stat card */}
+          <div className="c3-hcard c3-hcard-bottom">
+            <div className="c3-hcard-bottom-num">98%</div>
+            <div className="c3-hcard-bottom-text">
+              Client
+              <br />
+              Retention
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
